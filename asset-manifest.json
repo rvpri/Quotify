@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Quotify/static/css/main.9bbe713c.css",
+    "main.js": "/Quotify/static/js/main.7b33ab59.js",
+    "index.html": "/Quotify/index.html",
+    "main.9bbe713c.css.map": "/Quotify/static/css/main.9bbe713c.css.map",
+    "main.7b33ab59.js.map": "/Quotify/static/js/main.7b33ab59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bbe713c.css",
+    "static/js/main.7b33ab59.js"
+  ]
+}
