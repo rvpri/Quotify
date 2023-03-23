@@ -2,7 +2,7 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 const IMAGE_URL = "https://pixabay.com/api/?key=34580858-7b9dabaf1f7f4980f5e6b2f34&image_type=photo&orientation=horizontal&category=nature"
-const QUOTE_URL = "https://api.quotable.io/random"
+const QUOTE_URL = "https://type.fit/api/quotes"
 
 function App() {
 
@@ -25,7 +25,9 @@ function App() {
 
     fetch(QUOTE_URL )
     .then(res => res.json())
-    .then(data => setQuotes(data))
+    .then(data => {
+      const randomIndex = Math.floor(Math.random() * data.length);
+      setQuotes(data[randomIndex]);})
     .catch(error => console.error(error));
   }
 
@@ -45,13 +47,13 @@ function App() {
       <div className='bgImage'>
       <img src={image.largeImageURL} alt={image.tags} />
       <div className='quoteText'>
-        <p className="myQuote">{quotes.content}</p>
+        <p className="myQuote">{quotes.text}</p>
         <p className='author'>{quotes.author}</p>
       </div>
       </div>
       <div className='mybuttons'>
-      <button onClick ={fetchQuote} >New Quote</button> 
-      <button onClick ={fetchImage}>New Image</button>
+      <button onClick ={fetchQuote} >Get Quote</button> 
+      <button onClick ={fetchImage}>Get Image</button>
       </div>
       </div>
     </div>
