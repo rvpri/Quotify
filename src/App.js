@@ -2,7 +2,7 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 const IMAGE_URL = "https://pixabay.com/api/?key=34580858-7b9dabaf1f7f4980f5e6b2f34&image_type=photo&orientation=horizontal&category=nature"
-const QUOTE_URL = "http://api.quotable.io/random"
+const QUOTE_URL = "https://api.quotable.io/random"
 
 function App() {
 
