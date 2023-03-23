@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.header{
+  background-color:rgb(26, 133, 241);
+  width:100%;
+  display:flex;
+  justify-content :center;
+  color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MyApp {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.bgImage {
+  margin-top: 100px;
+  position: relative;
+  width: 800px;
+  height: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bgImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quoteText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteText .myQuote{
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.mybuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mybuttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(26, 133, 241);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mybuttons button:hover {
+  background-color: #2980b9;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .bgImage {
+    margin-top: 50px;
+    width: 400px;
+    height: 200px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .quoteText {
+    font-size: 10px; 
+  }
+
+  .quoteText .author{
+    font-size: 10px;
+   
+  }
+
+  .mybuttons button {
+    font-size: 10px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .bgImage {
+    margin-top: 30px;
+    width: 300px;
+    height: 150px;
+  }
+
+  .quoteText .myQuote{
+    font-size: 10px;
+   
+  }
+
+  .quoteText .author{
+    font-size: 10px;
+   
+  }
+}
+
